@@ -4,7 +4,12 @@ import Parser from 'body-parser'
 // import Multer from 'multer'
 import ErrorHandler from 'errorhandler'
 import ResponseTime from 'response-time'
-import rask from './routes/task';
+import task from './routes/task';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
+console.log(process.env.DB_USER);
 
 const port = process.env.PORT || 3000
 const ENV = process.env.NODE_ENV = process.env.NODE_ENV || 'development'
